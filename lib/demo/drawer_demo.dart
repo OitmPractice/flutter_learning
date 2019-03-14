@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class DrawerDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -12,7 +11,6 @@ class DrawerDemo extends StatelessWidget {
               accountName: Text(
                 'Oitm', 
                 style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                 
                 ),
               accountEmail: Text('happy_ran@outlook.com',
               style: TextStyle(color: Colors.white),
