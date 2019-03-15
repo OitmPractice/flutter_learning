@@ -6,6 +6,7 @@ import './demo/bottom_navigation_bar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/view_demo.dart';
+import './demo/sliver_demo.dart';
 
 void main() => runApp(App());
 
@@ -18,11 +19,12 @@ class App extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
        home: Home(),
-       theme: ThemeData(
-         primarySwatch: Colors.yellow,
-         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-         splashColor: Colors.white70
-       ),
+      // home: SliverDemo(),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70
+      ),
     );
   }
 }
@@ -71,7 +73,8 @@ class Home extends StatelessWidget {
           ListViewDemo(),
           BasicDemo(),
           LayoutDemo(),
-          ViewDemo(),
+          // ViewDemo(),
+          SliverDemo(),
         ],
       ),
       drawer: DrawerDemo(),
