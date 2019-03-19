@@ -7,10 +7,11 @@ class Hello extends StatelessWidget{
       child: Text(
         'hello',
         textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 40,
-        fontWeight: FontWeight.bold,
-        color: Colors.black),
+        style: TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.bold,
+          color: Colors.black),
       ),
-    );;
+    );
   }
 }
