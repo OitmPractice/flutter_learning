@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './button_demo.dart';
+import './floating_action_button_demo.dart';
+import './popup_menu_button_demo.dart';
 
 class MeterialComponents extends StatelessWidget {
   @override
@@ -11,9 +14,17 @@ class MeterialComponents extends StatelessWidget {
       body: ListView(
         children: <Widget>[
            ListItem(
-             title: 'FloatingActionButton',
-             page: FloatingActionButtonDemo(),
-           )
+            title: 'PopupMenuButton',
+            page: PopupMenuButtonDemo(),
+          ),
+          ListItem(
+            title: 'Button',
+            page: ButtonDemo(),
+          ),
+          ListItem(
+            title: 'FloatingActionButton',
+            page: FloatingActionButtonDemo(),
+          ),
         ],
       ),
     );
@@ -22,42 +33,30 @@ class MeterialComponents extends StatelessWidget {
 
 
 
-class FloatingActionButtonDemo extends StatelessWidget {
+class _WidgetDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-    final Widget _floatingActionButton =FloatingActionButton(
-      onPressed: (){},
-      child: Icon(Icons.add),
-      elevation: 0.0,//跟阴影的距离
-      backgroundColor: Colors.black87,
-      // shape: BeveledRectangleBorder(
-      //   borderRadius: BorderRadius.circular(10)
-      // ),
-    );
-
-    final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
-      onPressed: (){},
-      icon: Icon(Icons.add),
-      label: Text('Add'),
-    );
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text('FloatingActionButtonDemo'),
+        title: Text('_WidgetDemo'),
         elevation: 0.0,
       ),
-      floatingActionButton: _floatingActionButton,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 80,
+      body: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[],
+            )
+          ],
         ),
-        shape: CircularNotchedRectangle(),
       ),
-      // floatingActionButton: _floatingActionButtonExtended,
     );
   }
 }
+
 
 class ListItem extends StatelessWidget {
   final String title;
@@ -72,7 +71,7 @@ class ListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(title),
-      onTap: (){
+      onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => page,
