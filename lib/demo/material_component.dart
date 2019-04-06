@@ -8,6 +8,12 @@ import './radio_demo.dart';
 import './switch_demo.dart';
 import './slider_demo.dart';
 import './datetime_demo.dart';
+import './simple_dialog_demo.dart';
+import './alert_dialog_demo.dart';
+import './bottom_sheet_demo.dart';
+import './snack_bar_demo.dart';
+import './expansion_panel_demo.dart';
+
 
 class MeterialComponents extends StatelessWidget {
   @override
@@ -19,6 +25,26 @@ class MeterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'ExpansionPanelDemo',
+            page: ExpansionPanelDemo(),
+          ),
+          ListItem(
+            title: 'SnackBarDemo',
+            page: SnackBarDemo(),
+          ),
+          ListItem(
+            title: 'BottomSheetDemo',
+            page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: 'AlertDialogDemo',
+            page: AlertDialogDemo(),
+          ),
+          ListItem(
+            title: 'SimpleDialog',
+            page: SimpleDialogDemo(),
+          ),
           ListItem(
             title: 'DateTimeDemo',
             page: DateTimeDemo(),
